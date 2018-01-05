@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--个人中心-->
         <scene sceneID="HVO-eo-BUo">
             <objects>
                 <viewController id="Ojn-e3-CZh" sceneMemberID="viewController">
@@ -22,17 +22,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="4bF-sR-JOa"/>
+                    <tabBarItem key="tabBarItem" title="个人中心" image="btn_user_normal" id="4bF-sR-JOa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRx-dy-6sC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="415.19999999999999" y="196.55172413793105"/>
+            <point key="canvasLocation" x="670" y="196"/>
         </scene>
-        <!--Item-->
+        <!--我的-->
         <scene sceneID="YXb-8n-thX">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yua-wc-zlS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hfl-eN-9nO"/>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yua-wc-zlS" userLabel="我的" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="btn_user_normal" id="hfl-eN-9nO" userLabel="我的"/>
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="llM-st-UHB">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -48,4 +48,7 @@
             <point key="canvasLocation" x="-224" y="196.10194902548727"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_user_normal" width="24" height="24"/>
+    </resources>
 </document>
