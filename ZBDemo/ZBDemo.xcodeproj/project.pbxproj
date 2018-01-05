@@ -59,6 +59,9 @@
 		E74851E51FFFC1A5009741BD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E74851F71FFFD5EE009741BD /* Model */,
+				E74851F81FFFD61E009741BD /* View */,
+				E74851FA1FFFD64A009741BD /* Controller */,
 				E74851EB1FFFCAE6009741BD /* Home.storyboard */,
 			);
 			path = Home;
@@ -102,6 +105,27 @@
 				E74851F51FFFCF61009741BD /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		E74851F71FFFD5EE009741BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E74851F81FFFD61E009741BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E74851FA1FFFD64A009741BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E796A8C11FFE802400CD2841 = {
