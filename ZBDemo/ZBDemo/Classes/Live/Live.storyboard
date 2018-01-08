@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--live-->
         <scene sceneID="tAJ-1Z-ZBA">
             <objects>
                 <viewController id="FOR-cn-Vde" sceneMemberID="viewController">
@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MbD-3f-sNS"/>
+                    <navigationItem key="navigationItem" title="live" id="MbD-3f-sNS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIs-IL-Q1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="557" y="-185"/>
+            <point key="canvasLocation" x="692" y="-187"/>
         </scene>
         <!--直播-->
         <scene sceneID="0c2-vC-x0b">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UsU-ub-Lnq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UsU-ub-Lnq" customClass="LiveViewController" customModule="ZBDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="直播" image="btn_live_normal" id="kVd-uH-8k0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZD-Mo-wLi">
@@ -40,12 +40,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="FOR-cn-Vde" kind="relationship" relationship="rootViewController" id="wUc-qh-xDK"/>
+                        <segue destination="FOR-cn-Vde" kind="relationship" relationship="rootViewController" id="S5G-9w-0ET"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cON-ap-VNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="-202"/>
+            <point key="canvasLocation" x="-145" y="-186"/>
         </scene>
     </scenes>
     <resources>
