@@ -49,8 +49,8 @@
 		E796A8D71FFE802500CD2841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E796A8D91FFE802500CD2841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7B0A0D7200B061A00613FE2 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
-		E7B218C22009D16900904C1C /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionHeaderView.swift; path = ZBDemo/Classes/Home/Controller/CollectionHeaderView.swift; sourceTree = SOURCE_ROOT; };
-		E7B218C32009D16900904C1C /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CollectionHeaderView.xib; path = ZBDemo/Classes/Home/Controller/CollectionHeaderView.xib; sourceTree = SOURCE_ROOT; };
+		E7B218C22009D16900904C1C /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionHeaderView.swift; path = ZBDemo/Classes/Home/View/CollectionHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		E7B218C32009D16900904C1C /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CollectionHeaderView.xib; path = ZBDemo/Classes/Home/View/CollectionHeaderView.xib; sourceTree = SOURCE_ROOT; };
 		E7B218C62009E0C200904C1C /* CollectionViewNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewNormalCell.swift; sourceTree = "<group>"; };
 		E7B218C72009E0C200904C1C /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 		E7B218CA200A00FA00904C1C /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				E7B0A0D9200B071600613FE2 /* ViewModel */,
-				E78371362000BE91000A51FD /* Model */,
-				E78371372000BE91000A51FD /* View */,
+				E7B0A0DA200B077D00613FE2 /* Model */,
+				E7B0A0DB200B079200613FE2 /* View */,
 				E74851FA1FFFD64A009741BD /* Controller */,
 			);
 			path = Home;
@@ -162,22 +162,6 @@
 				E7D606E22008EB2A00C8FA09 /* RecommandViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E78371362000BE91000A51FD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E78371372000BE91000A51FD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E7B218C22009D16900904C1C /* CollectionHeaderView.swift */,
-				E7B218C32009D16900904C1C /* CollectionHeaderView.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E78371382000BEAF000A51FD /* Tools */ = {
@@ -234,6 +218,22 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E7B0A0DA200B077D00613FE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E7B0A0DB200B079200613FE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7B218C22009D16900904C1C /* CollectionHeaderView.swift */,
+				E7B218C32009D16900904C1C /* CollectionHeaderView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E7B29336200098D9008E8EBD /* View */ = {
