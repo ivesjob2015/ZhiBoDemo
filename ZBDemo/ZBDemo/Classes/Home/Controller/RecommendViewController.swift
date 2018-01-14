@@ -19,7 +19,7 @@ private let KHeaderViewID = "KHeaderViewID"
 private let KPrettyViewID = "KPrettyViewID"
 
 
-class RecommandViewController: UIViewController {
+class RecommendViewController: UIViewController {
     
     //懒加载属性
     private lazy var collectionView: UICollectionView = {[unowned self] in
@@ -45,17 +45,19 @@ class RecommandViewController: UIViewController {
         return collectionView
         }()
     
+    private lazy var recommendVM: RecommendViewModel = RecommendViewModel()
     
     //系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置UI界面
         setupUI()
+        loadData()
     }
     
 }
 //设置UI界面内容
-extension RecommandViewController{
+extension RecommendViewController{
     private func setupUI(){
         //1.将UICollectionView添加到控制器的View中
         view.addSubview(collectionView)
@@ -63,8 +65,14 @@ extension RecommandViewController{
     }
 }
 
+//请求数据
+extension RecommendViewController{
+    private func loadData(){
+        recommendVM.requestData()
+    }
+}
 //遵守UICollectionView的数据协议
-extension RecommandViewController: UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension RecommendViewController: UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 12
     }
