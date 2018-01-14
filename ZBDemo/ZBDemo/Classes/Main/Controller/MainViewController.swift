@@ -30,7 +30,7 @@ class MainViewController: UITabBarController {
         navigationController.title = title;
         //默认图片
         navigationController.tabBarItem.image = UIImage(named: imageName)
-        //选中后的图片
+        //选中后的图片¡
         //navigationController.tabBarItem.selectedImage = UIImage(named: "btn_home_normal_selected")
         //创建view控制器
         let storyBoard = UIStoryboard(name: storyName, bundle: nil).instantiateInitialViewController()!
