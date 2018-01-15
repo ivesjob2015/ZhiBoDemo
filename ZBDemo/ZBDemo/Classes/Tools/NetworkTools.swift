@@ -15,16 +15,16 @@ enum MethodType {
 }
 class NetworkTools{
     class func requestData(type: MethodType,urlString: String,parameters: [String:NSString]? = nil,encoding: ParameterEncoding = URLEncoding.default,
-                           headers: HTTPHeaders? = nil,finishedCallBack: @escaping (AnyObject)->()){
+                           headers: HTTPHeaders? = nil,finishedCallBack: @escaping (Any)->()){
         //获取类型
         let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
         Alamofire.request(urlString, method: method, parameters: parameters,encoding: encoding, headers: headers).responseJSON { (response) in
             guard let result = response.result.value else{
-                print("error:\(response.result.error)")
+                print("error:\(String(describing: response.result.error))")
                 return
             }
             print("Request: \(String(describing: response.request))")   // original url request
-            finishedCallBack(result as AnyObject)
+            finishedCallBack(result as Any)
         }
     }
 }

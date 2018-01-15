@@ -17,6 +17,7 @@
 		E796A8CE1FFE802400CD2841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796A8CD1FFE802400CD2841 /* AppDelegate.swift */; };
 		E796A8D51FFE802500CD2841 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E796A8D41FFE802500CD2841 /* Assets.xcassets */; };
 		E796A8D81FFE802500CD2841 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E796A8D61FFE802500CD2841 /* LaunchScreen.storyboard */; };
+		E79B3AEF200CF5B00079A063 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B3AEE200CF5B00079A063 /* BaseCollectionViewCell.swift */; };
 		E7B0A0D8200B061A00613FE2 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0A0D7200B061A00613FE2 /* NetworkTools.swift */; };
 		E7B0A0DD200B07F000613FE2 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0A0DC200B07F000613FE2 /* RecommendViewModel.swift */; };
 		E7B0A0DF200B513B00613FE2 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0A0DE200B513B00613FE2 /* NSDate-Extension.swift */; };
@@ -52,6 +53,7 @@
 		E796A8D41FFE802500CD2841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E796A8D71FFE802500CD2841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E796A8D91FFE802500CD2841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E79B3AEE200CF5B00079A063 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7B0A0D7200B061A00613FE2 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		E7B0A0DC200B07F000613FE2 /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		E7B0A0DE200B513B00613FE2 /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				E7B218C72009E0C200904C1C /* CollectionViewNormalCell.xib */,
 				E7B218CA200A00FA00904C1C /* CollectionPrettyCell.swift */,
 				E7B218CB200A00FA00904C1C /* CollectionPrettyCell.xib */,
+				E79B3AEE200CF5B00079A063 /* BaseCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,10 +366,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZBDemo/Pods-ZBDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -423,6 +428,7 @@
 				E7F7D7BB2003AC2F003ECF7F /* UIColor-extension.swift in Sources */,
 				E7D606E32008EB2A00C8FA09 /* RecommendViewController.swift in Sources */,
 				E7B0A0E1200B5CFC00613FE2 /* AnchorGroup.swift in Sources */,
+				E79B3AEF200CF5B00079A063 /* BaseCollectionViewCell.swift in Sources */,
 				E7D85465200B61880033A013 /* AhchorModel.swift in Sources */,
 				E78371302000A1F8000A51FD /* HomeViewController.swift in Sources */,
 				E7B0A0DF200B513B00613FE2 /* NSDate-Extension.swift in Sources */,

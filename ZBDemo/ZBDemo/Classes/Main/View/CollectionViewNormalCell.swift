@@ -8,11 +8,23 @@
 
 import UIKit
 
-class CollectionViewNormalCell: UICollectionViewCell {
+class CollectionViewNormalCell: BaseCollectionViewCell {
 
+    @IBOutlet weak var roomNameLabel: UILabel!
+    
+   
+    //定义模型属性
+    override var anchor: AnchorModel?{
+        didSet{
+              super.anchor = anchor
+            
+            //房间名称
+            roomNameLabel.text = anchor?.room_name
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LiveViewController: UINavigationController {
+class LiveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

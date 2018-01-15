@@ -8,7 +8,7 @@
 
 import UIKit
 private let KTitlteViewH:CGFloat = 40
-class HomeViewController: UINavigationController {
+class HomeViewController: UIViewController {
     
     //懒加载属性
     private lazy var  pageTitleView: PageTitleView = {[weak self]in
@@ -52,7 +52,6 @@ extension HomeViewController{
         view.addSubview(pageTitleView)
         //添加ContentView
         view.addSubview(pageContentView)
-        pageContentView.backgroundColor = UIColor.green
     }
     private func setupNavigationBar(){
         let size = CGSize(width:40,height:40)

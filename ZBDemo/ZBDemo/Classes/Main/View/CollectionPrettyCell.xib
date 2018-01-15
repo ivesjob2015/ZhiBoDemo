@@ -28,7 +28,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KO9-CX-ZuI">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KO9-CX-ZuI">
                         <rect key="frame" x="0.0" y="271" width="46" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="3LT-7H-m1P"/>
@@ -47,30 +47,31 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6666在线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPY-th-7UI">
-                        <rect key="frame" x="247" y="5" width="60" height="20"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.2872469190140845" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOd-qy-389">
+                        <rect key="frame" x="244" y="8" width="60" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.30256932218309857" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="5aq-oS-Jux"/>
-                            <constraint firstAttribute="width" constant="60" id="MrS-J4-PJL"/>
+                            <constraint firstAttribute="height" constant="20" id="EoV-40-HHn"/>
+                            <constraint firstAttribute="width" constant="60" id="KUf-H6-5sa"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="666在线">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="3"/>
+                                <integer key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="qcf-w5-MR3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="67d-3g-dkG"/>
-                <constraint firstItem="DPY-th-7UI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="6ct-oZ-UkT"/>
+                <constraint firstAttribute="trailing" secondItem="iOd-qy-389" secondAttribute="trailing" constant="8" id="6G8-Go-H6K"/>
                 <constraint firstItem="a7h-Ez-C3A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="B7P-Hm-tL5"/>
-                <constraint firstAttribute="trailing" secondItem="DPY-th-7UI" secondAttribute="trailing" constant="5" id="Jo0-ge-7sd"/>
+                <constraint firstItem="iOd-qy-389" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="HSP-W1-Uue"/>
                 <constraint firstAttribute="bottom" secondItem="KO9-CX-ZuI" secondAttribute="bottom" constant="10" id="XqP-j6-eJf"/>
                 <constraint firstAttribute="trailing" secondItem="qcf-w5-MR3" secondAttribute="trailing" constant="5" id="aiF-mH-oGv"/>
                 <constraint firstItem="KO9-CX-ZuI" firstAttribute="top" secondItem="qcf-w5-MR3" secondAttribute="bottom" constant="5" id="eoa-lf-p4D"/>
@@ -81,6 +82,12 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="312" height="295"/>
+            <connections>
+                <outlet property="cityBtn" destination="KO9-CX-ZuI" id="11k-3m-cSH"/>
+                <outlet property="iconImageView" destination="a7h-Ez-C3A" id="Gpk-2n-QrK"/>
+                <outlet property="nickNameBtn" destination="qcf-w5-MR3" id="3xS-W9-pHS"/>
+                <outlet property="onLineBtn" destination="iOd-qy-389" id="PSq-dn-6c7"/>
+            </connections>
             <point key="canvasLocation" x="-76" y="-36"/>
         </collectionViewCell>
     </objects>
