@@ -88,7 +88,7 @@
                 <outlet property="nickNameBtn" destination="qcf-w5-MR3" id="3xS-W9-pHS"/>
                 <outlet property="onLineBtn" destination="iOd-qy-389" id="PSq-dn-6c7"/>
             </connections>
-            <point key="canvasLocation" x="-76" y="-36"/>
+            <point key="canvasLocation" x="-197" y="-40"/>
         </collectionViewCell>
     </objects>
     <resources>

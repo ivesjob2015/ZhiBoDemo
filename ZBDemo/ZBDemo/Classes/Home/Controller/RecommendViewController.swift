@@ -13,6 +13,7 @@ private let KItemW = (KScrrenW - 3 * KItemMargin) / 2
 private let KNormalItemH = KItemW * 3 / 4
 private let KPrettyItemH = KItemW * 4 / 3
 private let KHeaderViewH: CGFloat = 50
+private let KCyclerViewH: CGFloat = KScrrenW * 3 / 8
 
 private let KNormalCellID = "KNormalCellID"
 private let KHeaderViewID = "KHeaderViewID"
@@ -44,6 +45,11 @@ class RecommendViewController: UIViewController {
         return collectionView
         }()
     
+    private lazy var recycleView: RecommendCycleView = {
+        let recyclerView = RecommendCycleView.recommendCyclerView()
+        recyclerView.frame = CGRect(x: 0, y: -KCyclerViewH, width: KScrrenW, height: KCyclerViewH)
+        return recyclerView
+    }()
     
     
     //系统回调函数
@@ -60,7 +66,9 @@ extension RecommendViewController{
     private func setupUI(){
         //1.将UICollectionView添加到控制器的View中
         view.addSubview(collectionView)
-        
+        collectionView.addSubview(recycleView)
+        //3.设置collectionView的内边距
+        collectionView.contentInset = UIEdgeInsets(top: KCyclerViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -88,9 +96,9 @@ extension RecommendViewController: UICollectionViewDataSource,UICollectionViewDe
         //1.获取cell
         var cell: BaseCollectionViewCell
         if indexPath.section == 1{
-             cell = collectionView.dequeueReusableCell(withReuseIdentifier: KPrettyViewID, for: indexPath) as! CollectionPrettyCell
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: KPrettyViewID, for: indexPath) as! CollectionPrettyCell
         }else{
-             cell = collectionView.dequeueReusableCell(withReuseIdentifier: KNormalCellID, for: indexPath) as! CollectionViewNormalCell
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: KNormalCellID, for: indexPath) as! CollectionViewNormalCell
         }
         //4.将模型赋值给cell
         cell.anchor = anchor
