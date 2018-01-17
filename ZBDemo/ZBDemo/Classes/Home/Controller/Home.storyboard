@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yua-wc-zlS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,46 +9,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--主页-->
-        <scene sceneID="HVO-eo-BUo">
+        <!--home-->
+        <scene sceneID="Q9j-UC-1g8">
             <objects>
-                <viewController id="Ojn-e3-CZh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ICf-5Q-CLA" customClass="HomeViewController" customModule="ZBDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="n10-T1-OKT"/>
-                        <viewControllerLayoutGuide type="bottom" id="VM0-nM-0Ej"/>
+                        <viewControllerLayoutGuide type="top" id="TE8-ER-zWh"/>
+                        <viewControllerLayoutGuide type="bottom" id="2jE-CD-Lsz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PI5-Oc-xx3">
+                    <view key="view" contentMode="scaleToFill" id="qxA-96-9UI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lm-64-7c2">
+                                <rect key="frame" x="135" y="399" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="主页" image="btn_home_normal" id="4bF-sR-JOa"/>
+                    <navigationItem key="navigationItem" title="home" id="wxm-cQ-3e4"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yRx-dy-6sC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ci-6X-yA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="415.19999999999999" y="196.55172413793105"/>
-        </scene>
-        <!--主页-->
-        <scene sceneID="YXb-8n-thX">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yua-wc-zlS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="主页" image="btn_home_normal" id="hfl-eN-9nO"/>
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="llM-st-UHB">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Ojn-e3-CZh" kind="relationship" relationship="viewControllers" id="RFv-qx-9pz"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3eZ-jh-JLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-224" y="196.10194902548727"/>
+            <point key="canvasLocation" x="368.80000000000001" y="850.52473763118451"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="btn_home_normal" width="24" height="24"/>
-    </resources>
 </document>
