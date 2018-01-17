@@ -11,6 +11,7 @@ import Foundation
 class RecommendViewModel{
     //懒加载属性
     lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
+    lazy var cycleModels: [CycleModel] = [CycleModel]()
     lazy var bigDataGroup: AnchorGroup = AnchorGroup()
     lazy var prettyGroup: AnchorGroup = AnchorGroup()
     
@@ -81,6 +82,21 @@ extension RecommendViewModel{
         dispatchGroup.notify(queue: .main) {
             self.anchorGroups.insert(self.prettyGroup, at: 0)
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
+            finishCallback()
+        }
+    }
+    
+    //请求无线轮播的数据
+    func requestCycleData(finishCallback: @escaping ()->()){
+        NetworkTools.requestData(type: .GET, urlString: "http://www.douyutv.com/api/v1/slide/6",parameters: ["version":"2.300"]) { (result) in
+            //1.获取整体字典数据
+            guard let resultDict = result as? [String: NSObject ] else {return}
+            //2.根据data的key获取数据
+            guard let dataArray = resultDict["data"] as? [[String: NSObject]] else {return}
+            //3.字典转换模型对象
+            for dict in dataArray{
+                self.cycleModels.append(CycleModel(dict: dict))
+            }
             finishCallback()
         }
     }

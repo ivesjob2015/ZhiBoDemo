@@ -27,17 +27,18 @@
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="tzF-AJ-VUb"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="eLG-be-l0I"/>
                     </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ESg-pn-mtK">
-                    <rect key="frame" x="326" y="113" width="39" height="37"/>
+                    <rect key="frame" x="326" y="116" width="39" height="37"/>
                     <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="currentPageIndicatorTintColor" red="1" green="0.46519237949999998" blue="0.41418682750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
             </subviews>
             <color key="backgroundColor" red="0.43893725996655164" green="0.58658230545864332" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ESg-pn-mtK" secondAttribute="bottom" id="CsH-TG-KT3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ESg-pn-mtK" secondAttribute="bottom" constant="-3" id="CsH-TG-KT3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DdZ-GI-BCl" secondAttribute="trailing" id="Mip-jr-haZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DdZ-GI-BCl" secondAttribute="bottom" id="Mzy-gU-phO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ESg-pn-mtK" secondAttribute="trailing" constant="10" id="QgG-dH-zcW"/>
