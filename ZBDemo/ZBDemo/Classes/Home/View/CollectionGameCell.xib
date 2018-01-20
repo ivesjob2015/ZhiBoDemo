@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,17 +18,15 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCv-CG-NzZ">
                     <rect key="frame" x="15.5" y="65.5" width="49.5" height="14.5"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="14.5" id="1xU-Dy-lhw"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ij3-bt-kUY">
-                    <rect key="frame" x="17.5" y="15" width="45.5" height="45.5"/>
+                    <rect key="frame" x="17.5" y="14.5" width="45.5" height="45.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="Ij3-bt-kUY" secondAttribute="height" multiplier="1:1" id="SwC-57-uLQ"/>
+                        <constraint firstAttribute="width" constant="45.5" id="5at-YL-spw"/>
+                        <constraint firstAttribute="height" constant="45.5" id="F1m-6F-gL4"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -38,14 +35,23 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bx-C4-blg">
+                    <rect key="frame" x="0.0" y="89" width="80" height="1"/>
+                    <color key="backgroundColor" red="0.83835952979913031" green="0.83835952979913031" blue="0.83835952979913031" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="X8s-cI-k7N"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="qCv-CG-NzZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AMq-Rd-P9w"/>
-                <constraint firstItem="Ij3-bt-kUY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="E5e-lA-CAZ"/>
-                <constraint firstItem="Ij3-bt-kUY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="LiX-nX-i9h"/>
-                <constraint firstItem="qCv-CG-NzZ" firstAttribute="top" secondItem="Ij3-bt-kUY" secondAttribute="bottom" constant="5" id="crF-av-gWJ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qCv-CG-NzZ" secondAttribute="bottom" constant="10" id="vgP-B2-Rqc"/>
+                <constraint firstAttribute="trailing" secondItem="2bx-C4-blg" secondAttribute="trailing" id="PIL-mO-1ta"/>
+                <constraint firstItem="2bx-C4-blg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ShY-gF-o5s"/>
+                <constraint firstItem="Ij3-bt-kUY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-8" id="U8Z-TL-QI5"/>
+                <constraint firstItem="qCv-CG-NzZ" firstAttribute="top" secondItem="Ij3-bt-kUY" secondAttribute="bottom" constant="5" id="iKu-mE-Jmz"/>
+                <constraint firstItem="qCv-CG-NzZ" firstAttribute="centerX" secondItem="Ij3-bt-kUY" secondAttribute="centerX" id="o8n-gL-Ngy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2bx-C4-blg" secondAttribute="bottom" id="ogP-mm-poW"/>
+                <constraint firstItem="Ij3-bt-kUY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tnt-y9-WPX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -53,7 +59,7 @@
                 <outlet property="iconImageView" destination="Ij3-bt-kUY" id="sSP-h7-Xg2"/>
                 <outlet property="titleLabel" destination="qCv-CG-NzZ" id="rue-jH-oH1"/>
             </connections>
-            <point key="canvasLocation" x="-224" y="-288"/>
+            <point key="canvasLocation" x="-256" y="-333"/>
         </view>
     </objects>
 </document>

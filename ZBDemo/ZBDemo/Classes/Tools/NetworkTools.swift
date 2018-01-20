@@ -14,7 +14,7 @@ enum MethodType {
     case POST
 }
 class NetworkTools{
-    class func requestData(type: MethodType,urlString: String,parameters: [String:NSString]? = nil,encoding: ParameterEncoding = URLEncoding.default,
+    class func requestData(type: MethodType,urlString: String,parameters:[String: Any]? = nil,encoding: ParameterEncoding = URLEncoding.default,
                            headers: HTTPHeaders? = nil,finishedCallBack: @escaping (Any)->()){
         //获取类型
         let method = type == .GET ? HTTPMethod.get : HTTPMethod.post

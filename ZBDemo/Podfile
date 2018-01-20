@@ -4,4 +4,6 @@ use_frameworks!
 target 'ZBDemo' do
 pod 'Alamofire'
 pod 'Kingfisher'
+pod 'Moya/RxSwift', '~> 10.0'
+pod 'SwiftyJSON'
 end

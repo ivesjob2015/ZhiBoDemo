@@ -8,7 +8,7 @@
 
 import Foundation
 @objcMembers
-class AnchorGroup: NSObject {
+class AnchorGroup: BaseGameModel {
     //该组房间信息
     var room_list: [[String:NSObject]]?{
         didSet{
@@ -18,32 +18,6 @@ class AnchorGroup: NSObject {
             }
         }
     }
-    var tag_name: String = ""
-    var icon_url: String = "home_header_normal"
     //定义主播的模型对象数组
     lazy var anchors: [AnchorModel] = [AnchorModel]()
-    
-    override init() {
-        super.init()
-    }
-    init(dict : [String : Any]) {
-        super.init()
-        setValuesForKeys(dict)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        //print(key)
-    }
-    
-//    override func setValue(_ value: Any?, forKey key: String) {
-//        if key == "room_list"{
-//            if let dataArray = value as? [[String: NSObject]]{
-//                for dict in dataArray{
-//                    anchors.append(AnchorModel(dict: dict))
-//                }
-//            }
-//        }
-//    }
-    
-    
 }

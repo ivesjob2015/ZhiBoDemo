@@ -8,9 +8,8 @@
 
 import Foundation
 
-class RecommendViewModel{
+class RecommendViewModel: BaseViewModel{
     //懒加载属性
-    lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
     lazy var cycleModels: [CycleModel] = [CycleModel]()
     lazy var bigDataGroup: AnchorGroup = AnchorGroup()
     lazy var prettyGroup: AnchorGroup = AnchorGroup()
@@ -59,25 +58,28 @@ extension RecommendViewModel{
         }
         //3.请求2-12后面部分的游戏数据
         dispatchGroup.enter()
-        NetworkTools.requestData(type: .GET, urlString: "http://capi.douyucdn.cn/api/v1/getHotCate",parameters: parameters, finishedCallBack: { (result) in
-            //1.将result转换成字典类型
-            guard let resultDict = result as? [String:NSObject] else{return}
-            //2.根据data获取key，获取数据
-            guard let dataArray = resultDict["data"] as? [[String:NSObject]]else {return}
-            //3.便利数据，获取字典，并且将字典转换成模型对象
-            for dict in dataArray{
-                let group = AnchorGroup(dict: dict)
-                self.anchorGroups.append(group)
-            }
-            
-            for group in self.anchorGroups{
-                //print("item:\(group.tag_name) : \(group.room_list?.count)")
-                for anchor in group.anchors{
-                    //print(anchor.nickname)
-                }
-            }
+        loadAnchorData(url: "http://capi.douyucdn.cn/api/v1/getHotCate", params: parameters) {
             dispatchGroup.leave()
-        })
+        }
+//        NetworkTools.requestData(type: .GET, urlString: "http://capi.douyucdn.cn/api/v1/getHotCate",parameters: parameters, finishedCallBack: { (result) in
+//            //1.将result转换成字典类型
+//            guard let resultDict = result as? [String:NSObject] else{return}
+//            //2.根据data获取key，获取数据
+//            guard let dataArray = resultDict["data"] as? [[String:NSObject]]else {return}
+//            //3.便利数据，获取字典，并且将字典转换成模型对象
+//            for dict in dataArray{
+//                let group = AnchorGroup(dict: dict)
+//                self.anchorGroups.append(group)
+//            }
+//
+//            for group in self.anchorGroups{
+//                //print("item:\(group.tag_name) : \(group.room_list?.count)")
+//                for anchor in group.anchors{
+//                    //print(anchor.nickname)
+//                }
+//            }
+//            dispatchGroup.leave()
+//        })
         //4.所有的数据都请求到，之后进行排序
         dispatchGroup.notify(queue: .main) {
             self.anchorGroups.insert(self.prettyGroup, at: 0)

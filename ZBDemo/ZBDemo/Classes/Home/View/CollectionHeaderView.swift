@@ -18,19 +18,16 @@ class CollectionHeaderView: UICollectionReusableView {
         didSet{
             titleLabel.text = group?.tag_name
             iconImageView.image = UIImage(named: group?.icon_url ?? "home_header_normal")
-            
-//            //定义URL对象
-//            let url = URL(string: "http://hangge.com/blog/images/logo.png")
-//            //从网络获取数据流
-//            let data = try! Data(contentsOf: url!)
-//            //通过数据流初始化图片
-//            let newImage = UIImage(data: data)
-//            iconImageView.image = newImage
         }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-    
 }
+//从xib中快速创建的类方法
+extension CollectionHeaderView{
+    class func collectionHeaderView()-> CollectionHeaderView{
+        return Bundle.main.loadNibNamed("CollectionHeaderView", owner: nil, options: nil)?.first as! CollectionHeaderView
+    }
+}
+
